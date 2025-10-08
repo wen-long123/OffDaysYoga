@@ -1,0 +1,44 @@
+import { useEffect, useState } from "react";
+import preloadGif from "../assets/preload.gif"; // your GIF
+
+export const Preload = ({ onFinish }) => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    // Show preload for the GIF duration (e.g., 3000ms)
+    const timer = setTimeout(() => {
+      setVisible(false);
+      if (onFinish) onFinish();
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [onFinish]);
+
+  const text = "OffDays Yoga";
+
+  return (
+    visible && (
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-[var(--background)] text-[var(--foreground)] z-50">
+        {/* GIF */}
+        <img
+          src={preloadGif}
+          alt="OffDays Yoga Preload"
+          className="w-24 h-24 mb-6"
+        />
+
+        {/* Wave Text */}
+        <h1 className="text-4xl font-bold">
+          {text.split("").map((char, i) => (
+            <span
+              key={i}
+              className="animate-wave"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </h1>
+      </div>
+    )
+  );
+};
