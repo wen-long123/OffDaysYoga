@@ -50,17 +50,17 @@ export const SpecialFlows = () => {
               {/* Overlay */}
               <div
                 className={`absolute inset-0 bg-black/40 flex flex-col justify-between p-4 transition-opacity duration-500
-                  md:opacity-0 md:group-hover:opacity-100
+                  lg:opacity-0 lg:group-hover:opacity-100
                   ${isExpanded ? "opacity-100" : "opacity-0"}
                 `}
               >
-                {/* Instagram icon for mobile expanded overlay */}
+                {/* Instagram icon for mobile + tablet expanded overlay */}
                 {isExpanded && (
                   <a
                     href={flow.igLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-3 right-3 text-white hover:text-pink-400 transition-colors md:hidden"
+                    className="absolute top-3 right-3 text-white hover:text-pink-400 transition-colors lg:hidden"
                   >
                     <Instagram size={20} />
                   </a>
@@ -83,7 +83,7 @@ export const SpecialFlows = () => {
                   href={flow.igLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 self-end text-white hover:text-pink-400 transition-colors hidden md:inline-flex"
+                  className="mt-3 self-end text-white hover:text-pink-400 transition-colors hidden lg:inline-flex"
                 >
                   <Instagram size={20} />
                 </a>
@@ -91,7 +91,7 @@ export const SpecialFlows = () => {
 
               {/* Read More Button for small screens */}
               <button
-                className="absolute bottom-3 right-3 md:hidden px-2 py-1 text-xs font-semibold rounded bg-[var(--primary)] text-white shadow hover:bg-[var(--primary)]/90 transition-colors"
+                className="absolute bottom-3 right-3 lg:hidden px-2 py-1 text-xs font-semibold rounded bg-[var(--primary)] text-white shadow hover:bg-[var(--primary)]/90 transition-colors"
                 onClick={() => setExpandedIndex(isExpanded ? null : index)}
               >
                 {isExpanded ? "Close" : "Read More"}
