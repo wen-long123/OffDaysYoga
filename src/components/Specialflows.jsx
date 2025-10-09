@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Instagram } from "lucide-react";
 import { SpecialFlowsData } from "../constants/Specialflow";
 
 export const SpecialFlows = () => {
   const today = new Date();
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+
+  // Detect screen size (≤ 1024px = mobile/tablet)
+  useEffect(() => {
+    const checkDevice = () => setIsMobileOrTablet(window.innerWidth <= 1024);
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   return (
     <section className="min-h-screen px-6 py-16 bg-[var(--background)] text-[var(--foreground)]">
@@ -25,7 +34,7 @@ export const SpecialFlows = () => {
               key={index}
               className={`relative group rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ${flow.size}`}
             >
-              {/* Outside label */}
+              {/* Label */}
               <span
                 className={`absolute top-3 left-3 px-2 py-1 text-xs font-semibold rounded z-10 ${
                   isOngoing
@@ -89,13 +98,15 @@ export const SpecialFlows = () => {
                 </a>
               </div>
 
-              {/* Read More Button for small screens */}
-              <button
-                className="absolute bottom-3 right-3 lg:hidden px-2 py-1 text-xs font-semibold rounded bg-[var(--primary)] text-white shadow hover:bg-[var(--primary)]/90 transition-colors"
-                onClick={() => setExpandedIndex(isExpanded ? null : index)}
-              >
-                {isExpanded ? "Close" : "Read More"}
-              </button>
+              {/* Show Read More button only on mobile/tablet */}
+              {isMobileOrTablet && (
+                <button
+                  className="absolute bottom-3 right-3 px-2 py-1 text-xs font-semibold rounded bg-[var(--primary)] text-white shadow hover:bg-[var(--primary)]/90 transition-colors"
+                  onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                >
+                  {isExpanded ? "Close" : "Read More"}
+                </button>
+              )}
             </div>
           );
         })}
