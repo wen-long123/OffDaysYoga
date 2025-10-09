@@ -9,7 +9,7 @@ export const SpecialFlows = () => {
 
   // Detect screen size (≤ 1024px = mobile/tablet)
   useEffect(() => {
-    const checkDevice = () => setIsMobileOrTablet(window.innerWidth <= 1024);
+    const checkDevice = () => setIsMobileOrTablet(window.innerWidth <= 1200);
     checkDevice();
     window.addEventListener("resize", checkDevice);
     return () => window.removeEventListener("resize", checkDevice);
