@@ -59,7 +59,7 @@ export const SpecialFlows = () => {
               {/* Overlay */}
               <div
                 className={`absolute inset-0 bg-black/40 flex flex-col justify-between p-4 transition-opacity duration-500
-                  lg:opacity-0 lg:group-hover:opacity-100
+                  xl:opacity-0 xl:group-hover:opacity-100
                   ${isExpanded ? "opacity-100" : "opacity-0"}
                 `}
               >
@@ -69,7 +69,7 @@ export const SpecialFlows = () => {
                     href={flow.igLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-3 right-3 text-white hover:text-pink-400 transition-colors lg:hidden"
+                    className="absolute top-3 right-3 text-white hover:text-pink-400 transition-colors xl:hidden"
                   >
                     <Instagram size={20} />
                   </a>
