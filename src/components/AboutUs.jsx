@@ -107,7 +107,7 @@ export const AboutUs = () => {
               <img
                 src={aboutus3}
                 alt="Cofounder"
-                className="w-full max-h-[28rem] object-contain"
+                className="w-full max-h-[28rem] object-contain -translate-y-6"
               />
             </div>
 
