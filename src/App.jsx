@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { NotFound } from "./Pages/NotFound";
 import { Navbar } from "./components/Navbar";
@@ -10,12 +10,18 @@ import { ContactBtn } from "./components/ContactBtn";
 import { ContactPage } from "./components/ContactPage";
 import { Toaster } from "./components/ui/toaster";
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
+  // Hide ContactBtn only on the Contact Page
+  const hideContactBtn = location.pathname === "/contactpage";
+
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
-      <ContactBtn />
+      {!hideContactBtn && <ContactBtn />}
       <Toaster />
+
       <Routes>
         <Route index element={<Home />} />
         <Route path="/guides-flows" element={<Guidesflows />} />
@@ -24,7 +30,16 @@ function App() {
         <Route path="/contactpage" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
