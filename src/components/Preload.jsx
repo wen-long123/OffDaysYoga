@@ -26,8 +26,10 @@ export const Preload = ({ onFinish }) => {
           className="w-24 h-24 mb-6"
         />
 
+        <h1 className="text-4xl font-bold"> { text } </h1>
+
         {/* Wave Text */}
-        <h1 className="text-4xl font-bold">
+        {/* <h1 className="text-4xl font-bold">
           {text.split("").map((char, i) => (
             <span
               key={i}
@@ -37,7 +39,7 @@ export const Preload = ({ onFinish }) => {
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
-        </h1>
+        </h1> */}
       </div>
     )
   );
