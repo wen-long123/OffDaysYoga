@@ -35,7 +35,7 @@ export const Navbar = () => {
               className="nav-link"
               onClick={() => setMenu(false)}
             >
-              Guides & Flows
+              Class Types
             </a>
           </li>
         </ul>
@@ -54,7 +54,7 @@ export const Navbar = () => {
         <ul className="hidden md:flex gap-6">
           <li>
             <a href="/getyourflow" className="nav-link">
-              Get Your Flow
+              Flow with us
             </a>
           </li>
           <li>

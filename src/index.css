@@ -12,7 +12,7 @@
 
   body {
     @apply bg-[var(--background)] text-[var(--foreground)];
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: ui-sans-serif, system-ui, Brasika;
   }
 
   html {

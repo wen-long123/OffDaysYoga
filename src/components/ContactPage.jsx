@@ -59,7 +59,7 @@ export const ContactPage = () => {
           Know Your <span className="text-primary">Flow</span>
         </h1>
         <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base">
-          Email us for more information and inquiries — or join our community!
+          For private and coporate event, drop us an email below — or join our community!
         </p>
 
         {/* Grid Layout */}
