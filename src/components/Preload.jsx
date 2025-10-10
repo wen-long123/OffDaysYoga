@@ -14,8 +14,6 @@ export const Preload = ({ onFinish }) => {
     return () => clearTimeout(timer);
   }, [onFinish]);
 
-  const text = "OffDays Yoga";
-
   return (
     visible && (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-[var(--background)] text-[var(--foreground)] z-50">
@@ -26,7 +24,7 @@ export const Preload = ({ onFinish }) => {
           className="w-24 h-24 mb-6"
         />
 
-        <h1 className="text-4xl font-bold"> { text } </h1>
+        <h1 className="text-4xl font-bold font text-center"> OFFDAYS<br /> YOGA </h1>
 
         {/* Wave Text */}
         {/* <h1 className="text-4xl font-bold">

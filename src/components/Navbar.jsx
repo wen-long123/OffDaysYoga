@@ -47,7 +47,7 @@ export const Navbar = () => {
           onClick={() => setMenu(false)}
           className="font-bold text-2xl tracking-wide text-[var(--foreground)] hover:text-[var(--primary)] transition"
         >
-          OffDays Yoga
+          OFFDAYS YOGA
         </HashLink>
 
         {/* Right Links */}
