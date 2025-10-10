@@ -17,8 +17,8 @@ export const Guidesflows = () => {
         simply vibe, we’ve got a class for you.
       </p>
 
-      {/* Guides Display */}
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+      {/* Flows Display */}
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-6 justify-items-center">
         {flows.map((flow, index) => (
           <div
             key={index}

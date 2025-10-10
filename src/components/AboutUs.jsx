@@ -82,7 +82,7 @@ export const AboutUs = () => {
             <img
               src={aboutus3}
               alt="Cofounder"
-              className="w-1/2 max-h-[32rem] object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+              className="w-1/2 max-h-[32rem] object-contain transition-transform duration-300 ease-in-out hover:scale-105 -translate-y-14"
             />
 
             <div className="w-1/2 text-left px-1">
