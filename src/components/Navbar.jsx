@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 
 const navItems = [
   { name: "About Us", href: "/#aboutus" },
-  { name: "Guides & Flows", href: "/guides-flows" },
+  { name: "Class Types", href: "/guides-flows" },
   { name: "Get Your Flow", href: "/getyourflow" },
   { name: "Special Flows", href: "/specialflows" },
 ];
