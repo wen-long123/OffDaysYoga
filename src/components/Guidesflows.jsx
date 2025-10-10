@@ -23,20 +23,20 @@ export const Guidesflows = () => {
       </div>
 
       {/* Guides Display */}
-      <h1 className="text-4xl font-bold mb-6 mt-10">Flow with Us</h1>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
+      {/* <h1 className="text-4xl font-bold mb-6 mt-10">Flow with Us</h1>
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center"> */}
         {/* Trainer 1 */}
-        <div className="w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[2.8/3]">
+        {/* <div className="w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[2.8/3]">
           <img
             src={trainer1}
             alt="Trainer 1"
             className="w-full h-full object-cover rounded-xl shadow-lg border border-[var(--foreground)]/20
             transition-transform duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:border-[var(--primary)]"
           />
-        </div>
+        </div> */}
 
         {/* Trainer 2 */}
-        <div className="w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[2.8/3]">
+        {/* <div className="w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[2.8/3]">
           <img
             src={trainer2}
             alt="Trainer 2"
@@ -44,7 +44,7 @@ export const Guidesflows = () => {
             transition-transform duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:border-[var(--primary)]"
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
