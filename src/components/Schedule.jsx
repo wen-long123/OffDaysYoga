@@ -1,33 +1,32 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { packages } from "../constants/Packages";
 
 export const Schedule = () => {
-  useEffect(() => {
-    // Load jQuery (needed by Momoyoga)
-    const jqueryScript = document.createElement("script");
-    jqueryScript.src = "https://code.jquery.com/jquery-3.3.1.min.js";
-    jqueryScript.integrity =
-      "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=";
-    jqueryScript.crossOrigin = "anonymous";
-    document.body.appendChild(jqueryScript);
-
-    // Load Momoyoga schedule script after jQuery
-    jqueryScript.onload = () => {
-      const momoScript = document.createElement("script");
-      momoScript.src =
-        "https://www.momoyoga.com/schedule-plugin/v2/js/schedule.js";
-      momoScript.crossOrigin = "anonymous";
-      document.body.appendChild(momoScript);
-    };
-  }, []);
-
   return (
-    <div className="w-full flex flex-col items-center">
-      {/* Momoyoga Schedule */}
-      <div
-        className="momoyoga-schedule w-full max-w-3xl mb-12"
-        data-momo-schedule="https://www.momoyoga.com/offdaysyoga/schedule"
-      ></div>
+    <div className="w-full flex flex-col items-center px-4">
+      {/* Google Calendar Embed */}
+      <div className="w-full max-w-5xl mb-10">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSingapore&showPrint=0&src=b2ZmZGF5c3lvZ2FAZ21haWwuY29t&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
+          style={{ border: 0 }}
+          width="100%"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+          className="rounded-xl shadow-lg"
+          title="Class Schedule"
+        ></iframe>
+      </div>
+
+      {/* Schedule Button */}
+      <a
+        href="https://www.momoyoga.com/offdaysyoga/schedule"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-12 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
+      >
+        Schedule with Us
+      </a>
 
       {/* Packages Section */}
       <h3 className="text-2xl font-semibold mb-6">Class Packages & Pricing</h3>
