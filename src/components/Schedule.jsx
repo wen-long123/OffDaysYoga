@@ -6,14 +6,14 @@ export const Schedule = () => {
     <div className="w-full flex flex-col items-center px-4">
       {/* Google Calendar Embed */}
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-5xl p-4 bg-[var(--background)] border-4 border-[var(--foreground)] rounded-2xl shadow-xl">
+        <div className="w-full max-w-5xl p-2 sm:p-4 bg-[var(--background)] border-4 border-[var(--foreground)] rounded-2xl shadow-xl">
           <iframe
             src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSingapore&showPrint=0&showCalendars=0&title=OFFDAYS%20SCHEDULE&src=b2ZmZGF5c3lvZ2FAZ21haWwuY29t&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
             style={{ border: "0", borderRadius: "10px" }}
             width="100%"
             height="500"
             frameBorder="0"
-            scrolling="no"
+            scrolling="auto"
             title="Off Days Yoga Calendar"
           ></iframe>
         </div>
