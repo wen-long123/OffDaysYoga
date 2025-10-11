@@ -5,17 +5,18 @@ export const Schedule = () => {
   return (
     <div className="w-full flex flex-col items-center px-4">
       {/* Google Calendar Embed */}
-      <div className="w-full max-w-5xl mb-10">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSingapore&showPrint=0&src=b2ZmZGF5c3lvZ2FAZ21haWwuY29t&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
-          style={{ border: 0 }}
-          width="100%"
-          height="600"
-          frameBorder="0"
-          scrolling="no"
-          className="rounded-xl shadow-lg"
-          title="Class Schedule"
-        ></iframe>
+      <div className="w-full flex justify-center">
+        <div className="w-full max-w-5xl p-4 bg-[var(--background)] border-4 border-[var(--foreground)] rounded-2xl shadow-xl">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSingapore&showPrint=0&showCalendars=0&title=OFFDAYS%20SCHEDULE&src=b2ZmZGF5c3lvZ2FAZ21haWwuY29t&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
+            style={{ border: "0", borderRadius: "10px" }}
+            width="100%"
+            height="500"
+            frameBorder="0"
+            scrolling="no"
+            title="Off Days Yoga Calendar"
+          ></iframe>
+        </div>
       </div>
 
       {/* Schedule Button */}
@@ -23,7 +24,7 @@ export const Schedule = () => {
         href="https://www.momoyoga.com/offdaysyoga/schedule"
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-12 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
+        className="mb-12 mt-4 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
       >
         Schedule with Us
       </a>
