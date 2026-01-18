@@ -1,7 +1,8 @@
 @font-face {
-  font-family: "Brasika Display - Trial Regular";
-  src: local("Brasika Display - Trial Regular"),
-    url("./assets/fonts/brasika-display-trial.otf") format("opentype");
+  font-family: "Albert Sans - Trial Regular";
+  src:
+    local("Albert Sans - Trial Regular"),
+    url("./assets/fonts/AlbertSans-VariableFont_wght.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,7 +22,7 @@
 
   body {
     @apply bg-[var(--background)] text-[var(--foreground)];
-    font-family: ui-sans-serif, system-ui;
+    font-family: "Albert Sans - Trial Regular", ui-sans-serif, system-ui;
   }
 
   html {
@@ -54,8 +55,8 @@
    Animations
    ---------------------------- */
 @layer utilities {
-  .font-brasika {
-    font-family: "Brasika Display - Trial Regular", ui-sans-serif, system-ui;
+  .font-albert-sans {
+    font-family: "Albert Sans - Trial Regular", ui-sans-serif, system-ui;
   }
   /* Fade-in animation */
   @keyframes fade-in {
@@ -91,7 +92,9 @@
      Hero / Text Utilities
      ---------------------------- */
   .animate-fade-in-2-and-text-flow {
-    animation: fade-in 1s ease-out 1.2s forwards, text-flow 3s linear infinite;
+    animation:
+      fade-in 1s ease-out 1.2s forwards,
+      text-flow 3s linear infinite;
   }
 
   .animate-fade-in-delay-1 {

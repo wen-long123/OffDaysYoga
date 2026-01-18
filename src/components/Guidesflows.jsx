@@ -5,9 +5,11 @@ import flow1 from "../assets/Guidesflow/Dynamic.jpg";
 import flow2 from "../assets/Guidesflow/Essential.jpg";
 import flow3 from "../assets/Guidesflow/Zenflow.jpg";
 import flow4 from "../assets/Guidesflow/Peakflow.jpg";
+import flow5 from "../assets/Guidesflow/goldenflow.png";
+import { corporate } from "../constants/Packages";
 
 export const Guidesflows = () => {
-  const flows = [flow2, flow3, flow1, flow4];
+  const flows = [flow2, flow3, flow1, flow4, flow5];
   return (
     <section className="min-h-screen px-8 py-16 bg-[var(--background)] text-[var(--foreground)] text-center">
       {/* Section Title */}
@@ -22,7 +24,7 @@ export const Guidesflows = () => {
         {flows.map((flow, index) => (
           <div
             key={index}
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[5/3]"
+            className={`w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[5/3] ${index === flows.length - 1 ? "md:col-span-2 md:justify-self-center" : ""}`}
           >
             <img
               src={flow}
@@ -42,6 +44,43 @@ export const Guidesflows = () => {
         <a href="/getyourflow" className="pulsating-btn">
           Book Your Flow
         </a>
+      </div>
+
+      <div>
+        <h1 className="text-4xl font-bold mb-6 mt-10">Corporate & Private</h1>
+        <p className="max-w-2xl mx-auto text-[var(--foreground)] mb-6">
+          Wherever You Are, We Flow - from company wellness events and team
+          bonding to restorative private in-home sessions for individuals to
+          pre- and post-natal private yoga sessions, OffDays Yoga strives to
+          create the perfect space to move, breathe, and reconnect.{" "}
+        </p>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-6 justify-items-center">
+          {corporate.map((item, index) => (
+            <div
+              key={index}
+              className="w-full max-w-sm md:max-w-md lg:max-w-lg"
+            >
+              <div className="aspect-[5/3]">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover rounded-xl shadow-lg border border-[var(--foreground)]/20
+          transition-transform duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:border-[var(--primary)]"
+                />
+              </div>
+
+              {/* Text below image */}
+              <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
+              <p className="text-sm opacity-80 mt-1">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="pt-4 opacity-0 animate-fade-in-delay-1 mt-6">
+          <a href="/contactpage" className="pulsating-btn">
+            Connect With Us
+          </a>
+        </div>
       </div>
 
       {/* Guides Display */}

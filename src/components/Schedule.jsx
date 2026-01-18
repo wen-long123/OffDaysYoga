@@ -5,7 +5,7 @@ export const Schedule = () => {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Google Calendar Embed */}
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <div className="w-full sm:max-w-6xl p-0 sm:p-4 bg-[var(--background)] border-4 border-[var(--foreground)] rounded-2xl shadow-xl">
           <iframe
             src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSingapore&showPrint=0&showCalendars=0&title=OFFDAYS%20SCHEDULE&src=b2ZmZGF5c3lvZ2FAZ21haWwuY29t&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
@@ -17,7 +17,7 @@ export const Schedule = () => {
             title="Off Days Yoga Calendar"
           ></iframe>
         </div>
-      </div>
+      </div> */}
 
       {/* Schedule Button */}
       <a
@@ -26,7 +26,7 @@ export const Schedule = () => {
         rel="noopener noreferrer"
         className="mb-12 mt-4 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
       >
-        Schedule with Us
+        Flow with Us
       </a>
 
       {/* Packages Section */}
@@ -50,6 +50,21 @@ export const Schedule = () => {
             </span>
           </a>
         ))}
+      </div>
+      <div className="grid grid-cols-1 gap-6 w-full max-w-5xl mt-4">
+        <a
+          href="https://www.eventbrite.sg/e/offdays-yoga-tickets-1845416363019?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-6 border-2 border-[var(--foreground)] rounded-xl shadow-lg 
+                       hover:shadow-2xl transition-all flex flex-col items-center text-center
+                       hover:bg-[var(--foreground)] hover:text-[var(--background)]"
+        >
+          <span className="text-xl font-bold">
+            For Promo Code Class Redemption
+          </span>
+          <span className="text-sm text-gray-400 mt-2">Click to redeem</span>
+        </a>
       </div>
     </div>
   );
